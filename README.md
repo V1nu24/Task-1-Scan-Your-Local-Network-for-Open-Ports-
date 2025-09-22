@@ -180,6 +180,35 @@ sudo nmap -sS -T4 <target_ip> -oN nmap_result.txt
 - Try different timing: `-T3` (slower) or `-T2`
 - Check firewall settings on both scanner and target
 
+## Results
+**The Ip addresses are diguised as Ip1, Ip2, Ip3......**
+```
+Nmap scan report for Ip1
+Host is up (0.00081s latency).
+Not shown: 816 filtered tcp ports (net-unreach), 181 filtered tcp ports (no-response)
+PORT    STATE SERVICE
+53/tcp  open  domain
+80/tcp  open  http
+443/tcp open  https
+
+
+
+Nmap scan report for TIZEN Ip2
+Host is up (0.0013s latency).
+Not shown: 812 filtered tcp ports (net-unreach), 186 closed tcp ports (reset), 1 closed tcp ports (net-unreach)
+PORT     STATE SERVICE
+8080/tcp open  http-proxy
+
+
+Nmap scan report for Ip3
+Host is up (0.00079s latency).
+Not shown: 825 filtered tcp ports (net-unreach), 172 filtered tcp ports (no-response)
+PORT    STATE SERVICE
+135/tcp open  msrpc
+139/tcp open  netbios-ssn
+445/tcp open  microsoft-ds
+```
+
 ## Contributing
 
 This is an educational project. Feel free to:
