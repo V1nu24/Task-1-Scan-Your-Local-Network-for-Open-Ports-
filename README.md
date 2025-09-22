@@ -152,15 +152,6 @@ network-port-scanner/
 3. **Security Assessment**: Check for unexpected open ports
 4. **Compliance Verification**: Ensure only required services are running
 
-## Next Steps
-
-After mastering TCP SYN scanning, consider exploring:
-- UDP scanning (`-sU`)
-- Service version detection (`-sV`)
-- Operating system detection (`-O`)
-- Script scanning (`-sC` or `--script`)
-- Stealth techniques and evasion
-
 ## Troubleshooting
 
 **Permission Denied Error:**
@@ -210,6 +201,55 @@ PORT    STATE SERVICE
 5. **msrpc** - Microsoft Remote Procedure Call service for inter-process communication in Windows
 6. **netbios-ssn** - NetBIOS Session Service for file/printer sharing and network communication in Windows
 7. **microsoft-ds** - Microsoft Directory Services (SMB/CIFS) for file sharing and Active Directory communication
+
+## Potential Risks Involved
+**domain (Port 53)**
+
+- DNS cache poisoning attacks and DNS spoofing
+- Information disclosure about internal network structure
+- DNS tunneling for data exfiltration or command & control
+
+
+**http (Port 80)**
+
+- Unencrypted data transmission (credentials, sensitive data visible)
+- Web application vulnerabilities (XSS, SQL injection, CSRF)
+- Man-in-the-middle attacks and traffic interception
+
+
+**https (Port 443)**
+
+- SSL/TLS vulnerabilities and weak encryption protocols
+- Certificate-based attacks and certificate spoofing
+- Web application attacks despite encryption
+
+
+**http-proxy (Port 8080/3128)**
+
+- Unauthorized internet access through open proxy
+- Traffic interception and data theft
+- Proxy chaining for anonymizing malicious activities
+
+
+**msrpc (Port 135)**
+
+- Remote code execution through RPC vulnerabilities
+- Lateral movement and privilege escalation in Windows networks
+- Information gathering about system services and processes
+
+
+**netbios-ssn (Port 139)**
+
+- Null session attacks for user enumeration
+- SMB relay attacks and credential theft
+- Ransomware propagation through network shares
+
+
+**microsoft-ds (Port 445)**
+
+- SMB vulnerabilities (EternalBlue, WannaCry-style attacks)
+- Credential harvesting and pass-the-hash attacks
+- Unauthorized file access and data exfiltration
 ## Contributing
 
 This is an educational project. Feel free to:
