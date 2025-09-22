@@ -33,12 +33,6 @@ brew install nmap
 - Download from: https://nmap.org/download.html
 - Run the installer as Administrator
 
-### Clone This Repository
-```bash
-git clone https://github.com/yourusername/network-port-scanner.git
-cd network-port-scanner
-```
-
 ## Usage
 
 ### Basic TCP SYN Scan
@@ -208,7 +202,14 @@ PORT    STATE SERVICE
 139/tcp open  netbios-ssn
 445/tcp open  microsoft-ds
 ```
-
+**Ports Opened**
+1. **domain** -  DNS service that resolves domain names to IP addresses and handles DNS queries
+2. **http** - Web server providing unencrypted HTTP websites and web applications
+3. **https** - Secure web server providing encrypted HTTP websites using SSL/TLS
+4. **http-proxy** - Web proxy server that forwards HTTP requests between clients and web servers
+5. **msrpc** - Microsoft Remote Procedure Call service for inter-process communication in Windows
+6. **netbios-ssn** - NetBIOS Session Service for file/printer sharing and network communication in Windows
+7. **microsoft-ds** - Microsoft Directory Services (SMB/CIFS) for file sharing and Active Directory communication
 ## Contributing
 
 This is an educational project. Feel free to:
